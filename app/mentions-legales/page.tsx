@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const ADRESSE = "4 rue des Bouvreuils, 30700 Uzès";
+const ADRESSE = "67 cours Gambetta, 13100 Aix-en-Provence";
 
 export const metadata = {
   title: "Mentions légales | Panier Perdu",
