@@ -3,7 +3,7 @@ import { Fraunces } from "next/font/google";
 const fraunces = Fraunces({ subsets: ["latin"], display: "swap" });
 
 // Ce lien sera remplacé à l'étape suivante par ton formulaire d'inscription.
-const FORM_URL = "#reserver";
+const FORM_URL = "https://tally.so/r/0VrbWP";
 
 export const metadata = {
   title: "Panier Perdu : récupère tes paniers abandonnés, 29 €/mois",
