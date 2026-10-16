@@ -117,7 +117,7 @@ export default function Home() {
         </section>
 
         <p className="mt-10 text-center text-sm text-[#1F2D26]/60">
-          Panier Perdu, créé par Mathilde.
+          Panier Perdu, créé par Mathilde. <a href="/mentions-legales" className="underline">Mentions légales</a> · <a href="/confidentialite" className="underline">Confidentialité</a>
         </p>
       </div>
     </main>
