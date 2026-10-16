@@ -1,69 +1,125 @@
-import Image from "next/image";
+import { Fraunces } from "next/font/google";
+
+const fraunces = Fraunces({ subsets: ["latin"], display: "swap" });
+
+// Ce lien sera remplacé à l'étape suivante par ton formulaire d'inscription.
+const FORM_URL = "#reserver";
+
+export const metadata = {
+  title: "Panier Perdu : récupère tes paniers abandonnés, 29 €/mois",
+  description:
+    "Deux relances écrites et personnalisées pour récupérer les paniers abandonnés de ta boutique Shopify. Relances illimitées, sans engagement.",
+  openGraph: {
+    title: "Panier Perdu : récupère tes paniers abandonnés",
+    description:
+      "Deux relances écrites et personnalisées pour ta boutique Shopify. 29 €/mois, sans engagement.",
+    locale: "fr_FR",
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="min-h-screen bg-[#F6F1E7] text-[#1F2D26]">
+      <div className="mx-auto max-w-xl px-5 pb-16 pt-6">
+        <p className="text-sm font-semibold tracking-wide uppercase text-[#C8512B]">
+          Panier Perdu
+        </p>
+
+        <h1
+          className={`${fraunces.className} mt-8 text-4xl font-bold leading-tight sm:text-5xl`}
+        >
+          Récupère les paniers que tes clients ont laissés.
+        </h1>
+
+        <p className="mt-5 text-lg leading-relaxed">
+          Deux relances écrites, personnalisées, envoyées toutes seules. Pour
+          les boutiques Shopify qui font quelques dizaines de commandes par
+          mois.
+        </p>
+
+        <a
+          href={FORM_URL}
+          className="mt-8 flex h-14 w-full items-center justify-center rounded-lg bg-[#C8512B] px-6 text-lg font-semibold text-white active:opacity-90"
+        >
+          Commencer, c&apos;est gratuit
+        </a>
+        <p className="mt-3 text-center text-sm text-[#1F2D26]/70">
+          Ouverture le 6 novembre 2026. Réserve ta place, sans paiement.
+        </p>
+
+        <section className="mt-14 border-t border-[#1F2D26]/20 pt-8">
+          <h2 className={`${fraunces.className} text-2xl font-bold`}>
+            Le problème, chiffré
+          </h2>
+          <p className="mt-3 leading-relaxed">
+            En moyenne, près de 7 paniers sur 10 sont abandonnés en ligne. Sur
+            une boutique qui fait 30 commandes par mois, ça représente des
+            dizaines de ventes qui t&apos;ont échappé, chaque mois. Les
+            grosses solutions de relance coûtent trop cher à ce niveau de
+            chiffre d&apos;affaires, alors la plupart des petites boutiques ne
+            relancent rien.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        </section>
+
+        <section className="mt-12">
+          <h2 className={`${fraunces.className} text-2xl font-bold`}>
+            Ce que tu obtiens
+          </h2>
+          <ul className="mt-4 space-y-5">
+            <li>
+              <p className="font-semibold">Branchée en quelques minutes</p>
+              <p className="mt-1 leading-relaxed">
+                Tu connectes ta boutique Shopify. Panier Perdu lit les paniers
+                abandonnés, sans que tu aies rien à ajouter à ton site.
+              </p>
+            </li>
+            <li>
+              <p className="font-semibold">Deux relances, espacées</p>
+              <p className="mt-1 leading-relaxed">
+                Un premier rappel, puis un second avec, si tu le souhaites, un
+                code de réduction. Chaque message reprend les produits laissés
+                dans le panier.
+              </p>
+            </li>
+            <li>
+              <p className="font-semibold">Le chiffre d&apos;affaires récupéré</p>
+              <p className="mt-1 leading-relaxed">
+                Un compteur te montre, en euros, ce que les relances ont
+                ramené. Tu vois tout de suite si ça vaut les 29 €.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section
+          id="reserver"
+          className="mt-14 rounded-xl bg-[#1F2D26] p-6 text-[#F6F1E7]"
+        >
+          <h2 className={`${fraunces.className} text-2xl font-bold`}>
+            29 € par mois, relances illimitées
+          </h2>
+          <p className="mt-2">Soit moins d&apos;1 € par jour. Sans engagement, résiliable à tout moment.</p>
+          <p className="mt-4 leading-relaxed">
+            Garantie satisfait ou remboursé pendant 30 jours après ton premier
+            paiement : tu écris à la boutique, on te rembourse, sans
+            justification.
+          </p>
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={FORM_URL}
+            className="mt-6 flex h-14 w-full items-center justify-center rounded-lg bg-[#C8512B] px-6 text-lg font-semibold text-white active:opacity-90"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            Réserver ma place, gratuit
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <p className="mt-3 text-center text-sm text-[#F6F1E7]/70">
+            Ouverture le 6 novembre 2026. Aucun paiement aujourd&apos;hui.
+          </p>
+        </section>
+
+        <p className="mt-10 text-center text-sm text-[#1F2D26]/60">
+          Panier Perdu, créé par Mathilde.
+        </p>
+      </div>
+    </main>
   );
 }
